@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Bookstore - Home{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<section class="home">
+
+    <div class="home__container">
+
+        <h2 class="home__title">Browse Books</h2>
+
+        <div class="home__group">
+            <label class="home__label">Select Category</label>
+            <select class="home__select" id="category">
+                <option value="">-- Select --</option>
+                <option value="kids">Kids</option>
+                <option value="adults">Adults</option>
+            </select>
+        </div>
+
+        <div class="home__group" id="subcategory-group">
+            <label class="home__label">Select Subcategory</label>
+
+            <select class="home__select" id="subcategory">
+                <option value="">-- Select --</option>
+            </select>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
+
+{% block javascript %}
+
+<script src="{{ url_for('static', filename='javascript/home.js') }}"></script>
+
+{% endblock %}
+
+

@@ -1,0 +1,41 @@
+/* Container */
+.home__container {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Title */
+.home__title {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Group */
+.home__group {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+/* Label */
+.home__label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+/* Select */
+.home__select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#subcategory-group {
+    display: none;
+}

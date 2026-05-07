@@ -1,0 +1,76 @@
+.books__container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.book__card {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.book__image {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
+.book__info {
+    display: flex;
+    flex-direction: column;
+}
+
+.book__title {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.book__price {
+    margin: 8px 0;
+}
+
+.book__buy {
+    margin-top: auto;
+    width: fit-content;
+    padding: 6px 14px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;     
+    font-size: 16px;       
+}
+
+.books__header {
+    padding: 15px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 18px;
+}
+
+.books__back {
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    font-weight: 500;
+}
+
+.books__back:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+}

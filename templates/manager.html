@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Bookstore - Register{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/manager.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<section class="manager">
+
+    <div class="manager__box">
+
+        <button class="manager__button" onclick="getOrders()">
+            Fetch Orders
+        </button>
+
+        <p class="manager__error" id="error-msg"></p>
+    </div>
+
+    <div class="manager__orders">
+        <table class="manager__table" id="orders-table">
+            <thead class="manager__table-head">
+                <tr class="manager__row">
+                    <th class="manager__cell">Order ID</th>
+                    <th class="manager__cell">Name</th>
+                    <th class="manager__cell">Email</th>
+                    <th class="manager__cell">Phone</th>
+                    <th class="manager__cell">Title</th>
+                    <th class="manager__cell">Price</th>
+                </tr>
+            </thead>
+            <tbody class="manager__table-body" id="orders-body">
+            </tbody>
+        </table>
+    </div>
+
+</section>
+
+{% endblock %}
+
+
+{% block javascript %}
+
+<script src="{{ url_for('static', filename='javascript/manager.js') }}"></script>
+
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Bookstore - Login{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<section class="login">
+
+    <div class="login__container">
+
+        <p class="login__error">
+            {{ error if error else '' }}
+        </p>
+
+        <div class="login__form">
+
+            <h3 class="login__title">Customer Login</h3>
+
+            <form method="POST" action="/login">
+
+                <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+
+                <div class="login__group">
+                    <label class="login__label">Email</label>
+                    <input type="email" name="email" class="login__input" required>
+                </div>
+
+                <div class="login__group">
+                    <label class="login__label">Password</label>
+                    <input type="password" name="password" class="login__input" required>
+                </div>
+
+                <div class="login__group">
+                    <label class="login__label">Enter CAPTCHA</label>
+
+                    <div class="login__captcha-box">
+                        <img src="{{ captcha_image }}" alt="captcha" class="login__captcha-img">
+                    </div>
+
+                    <input type="text" name="captcha" class="login__input" required>
+                </div>
+
+                <button type="submit" class="login__button">Login</button>
+
+            </form>
+
+            <p class="login__footer">
+                Don't have an account?
+                <a href="/register" class="login__link">Register</a>
+            </p>
+            
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Bookstore - Books{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/books.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<section>
+
+    <h1>Books - {{ subcategory }}</h1>
+    
+    <!-- Back Button -->
+    <div class="books__header">
+        <a href="/" class="books__back">Back to Home</a>
+    </div>
+
+    <div class="books__container" id="books-container">
+    </div>
+
+</section>
+
+{% endblock %}
+
+{% block javascript %}
+<script src="{{ url_for('static', filename='javascript/books.js') }}"></script>
+{% endblock %}
