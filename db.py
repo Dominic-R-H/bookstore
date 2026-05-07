@@ -1,12 +1,14 @@
+import os
 import pymysql
-import sqlite3
+
 
 def get_connection():
     return pymysql.connect(
-        host="localhost",
-        user="bookuser",
-        password="password123",
-        database="bookstore",
+        host=os.getenv("DB_HOST"),
+        user=os.getenv("DB_USER"),
+        password=os.getenv("DB_PASSWORD"),
+        database=os.getenv("DB_NAME"),
+        port=int(os.getenv("DB_PORT", 3306)),
         cursorclass=pymysql.cursors.DictCursor
     )
 

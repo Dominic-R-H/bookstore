@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask
 from controllers.auth_controller import auth
 from controllers.home_controller import home
@@ -9,7 +11,7 @@ app = Flask(__name__)
 app.config['SESSION_COOKIE_SECURE'] = True
 app.config['SESSION_COOKIE_HTTPONLY'] = True
 app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
-app.secret_key = "sfskjflkjflkjflksjflkj374uoiewdhhakjh"
+app.secret_key = os.getenv("SECRET_KEY")
 
 
 # Register the controllers
