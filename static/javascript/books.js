@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     <div class="book__info">
                         <div class="book__title">${book.title}</div>
-                        <div class="book__price">$${book.price}</div>
+                        <div class="book__price">£${book.price}</div>
                     </div>
                 `;
 
